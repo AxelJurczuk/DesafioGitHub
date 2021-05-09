@@ -1,0 +1,59 @@
+@import 'colors.scss';
+@import 'fonts.scss';
+@import 'sizes.scss';
+
+/*Constants*/
+$btnBackground: false;
+
+/*Text*/
+.body__background{  
+    background-color:$bodyBackground;  
+}
+
+.card__background{
+    background-color:$bodyBackground;
+    color: lightgray;
+}
+
+.card__body__btn {
+    transition-duration: 0.4s;
+    
+  }
+.card__body__btn:hover {
+    @if $btnBackground == true{
+        background-color:$green;
+    } @else{
+        background-color:$blue;
+    }
+     
+    color: white;
+}
+
+.title{
+    color: $title;
+}
+img{
+    opacity: 0.86;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    font-family: $Josefin;
+}
+
+@media only screen and (min-width: 1200px) {
+    .card__body__img{
+        padding: $bodyPadding;
+    }
+    .card__spacing{
+        padding-right: $bodyPadding;
+        padding-left: $bodyPadding;
+    }
+
+    .card__margin{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    
+}
